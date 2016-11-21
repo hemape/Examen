@@ -1,15 +1,13 @@
 import java.util.Scanner;
 
-/*
- * CSI Florida
+/* * CSI Florida
  * Reto Putadon
  * 
  * El siguiente código busca una letra dentro de una frase
  * y devuelve dónde se ha encontrado y ctas veces
  * 
  * Hay dos errores
- * 
- */
+ *  */
 public class Putadon {
 	
 	public static void main(String[] args) {
@@ -18,13 +16,17 @@ public class Putadon {
 		int numPos=0;
 		int numRepeticiones=0;
 		char letra=0;
+		pideDatos();
+		buscaLetra();
 		
 		//Pedimos datos
+		public static void pideDatos(){
 		Scanner sc=new Scanner(System.in);
 		
 		System.out.println("Introduce tu frase");
 		frase = sc.nextLine();
-		
+		}
+		public static void buscaLetra(){
 		System.out.println("Introduce la letra a buscar");
 		letra = sc.nextLine().charAt(0); //charAt(0) devuelve la primera letra
 		
@@ -35,7 +37,11 @@ public class Putadon {
 				System.out.println("Letra "+letra+" encontrada en la posicion "+i);
 			}
 		}
+		}
 		System.out.println("Total repeticiones "+numRepeticiones);
 	
 	}
 }
+
+//Deberiamos crear un metodo para cada objetivo, en este caso pideDatos (que pedira que introduzcas una frase), y buscaLetra (que buscara la posición de la letra que introduzcas)
+//Y llamandolos desde el main, creariamos un codigo mas limpio (refactoring)
